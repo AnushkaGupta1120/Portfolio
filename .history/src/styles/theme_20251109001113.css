@@ -1,0 +1,133 @@
+/* -------------------------------------------- */
+/* 🌗 Global Dual-Mode Portfolio Theme (Anushka) */
+/* -------------------------------------------- */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 💡 Smooth transition for color/theme changes */
+* {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* -------------------------------------------- */
+/* 🎨 Global Colors (Light + Dark Mode) */
+/* -------------------------------------------- */
+:root {
+  --accent: #f4a261;
+  --accent-light: #ffb87a;
+  --muted-indigo: #4b56d2;
+  --navy: #0b0c10;
+  --indigo-card: #161a25;
+  --soft-text: #bfc7d5;
+  --light: #ffffff;
+}
+
+/* -------------------------------------------- */
+/* 🌟 Utility Classes for Reusability */
+/* -------------------------------------------- */
+
+/* ✅ Accent Buttons */
+.btn-accent {
+  @apply bg-gradient-to-r from-[var(--accent)] to-[var(--muted-indigo)] 
+         text-white font-semibold rounded-lg shadow-md 
+         hover:opacity-90 hover:shadow-lg transition-all duration-300;
+}
+
+.btn-accent-outline {
+  @apply border-2 border-[var(--accent)] text-[var(--accent)]
+         hover:bg-[var(--accent)] hover:text-white transition-all duration-300;
+}
+
+/* ✅ Gradient Titles */
+.text-gradient {
+  @apply bg-gradient-to-r from-[var(--accent)] to-[var(--muted-indigo)] bg-clip-text text-transparent;
+}
+
+/* ✅ Card Containers */
+.bg-card {
+  @apply bg-white dark:bg-[var(--indigo-card)] shadow-md rounded-xl transition-all duration-300;
+}
+
+.bg-card-hover {
+  @apply hover:shadow-[0_0_20px_rgba(244,162,97,0.4)] hover:-translate-y-1;
+}
+
+/* ✅ Glow Shadow */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(244, 162, 97, 0.4);
+}
+
+/* ✅ Section Padding */
+.section {
+  @apply py-20 px-6 md:px-12 lg:px-20;
+}
+
+/* ✅ Subtle Divider */
+.divider {
+  @apply w-20 h-1 mx-auto rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--muted-indigo)];
+}
+
+/* ✅ Input Fields */
+.input-field {
+  @apply w-full px-4 py-3 rounded-lg border-none outline-none
+         bg-gray-100 dark:bg-[var(--indigo-card)] text-gray-900 dark:text-[var(--light)]
+         focus:ring-2 focus:ring-[var(--accent)] focus:scale-[1.02] transition-all duration-300;
+}
+
+/* ✅ Section Backgrounds */
+.bg-section-light {
+  @apply bg-gray-50;
+}
+
+.bg-section-dark {
+  @apply dark:bg-[var(--navy)];
+}
+
+/* ✅ Text Color Utilities */
+.text-accent {
+  color: var(--accent);
+}
+
+.dark .text-accent {
+  color: var(--accent-light);
+}
+
+.text-soft {
+  @apply text-gray-600 dark:text-[var(--soft-text)];
+}
+
+/* ✅ Navigation Links */
+.nav-link {
+  @apply text-gray-800 dark:text-[var(--soft-text)] 
+         hover:text-[var(--accent)] dark:hover:text-[var(--accent)] 
+         font-medium transition-colors duration-300;
+}
+
+/* ✅ Hover Glow for Icons */
+.icon-hover {
+  @apply transition-transform duration-300 hover:scale-110 hover:text-[var(--accent)];
+}
+
+/* -------------------------------------------- */
+/* 🌀 Animations (same as Tailwind extension) */
+/* -------------------------------------------- */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out both;
+}
+
+.animate-floatSlow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
