@@ -1,7 +1,7 @@
 .loading-screen {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(145deg, #000000, #010006); /* deep blue gradient */
+  background: linear-gradient(145deg, #020b1d, #010006); /* deep blue gradient */
   display: flex;
   flex-direction: column;
   align-items: center;
