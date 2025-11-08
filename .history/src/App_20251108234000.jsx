@@ -8,40 +8,49 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+
 export default function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
+
+   const [isLoaded, setIsLoaded] = useState(false);
+
+  
+    <>
+      {!isLoaded ? (
+        <LoadingPage onLoaded={() => setIsLoaded(true)} />
+      ) : (
+        <Hero />
+      )}
+    </>
+  
+  
   const [darkMode, setDarkMode] = useState(() => {
-    const savedTheme = localStorage.getItem("theme");
-    // Default to dark mode if nothing is saved
-    return savedTheme ? savedTheme === "dark" : true;
-  });
-  const [showCursor, setShowCursor] = useState(true);
+  // Try to get saved theme preference
+  // const savedTheme = localStorage.getItem("theme");
+  // If none found, default to dark mode
+  return savedTheme ? savedTheme === "dark" : true;
+});
 
-  useEffect(() => {
-    // Check if device is mobile/tablet
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    setShowCursor(!isMobile);
+useEffect(() => {
+  // Check if device is mobile/tablet
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  setShowCursor(!isMobile);
 
-    // Apply dark mode class to <html>
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  }, [darkMode]);
-
-  // Show loading screen until fully loaded
-  if (!isLoaded) {
-    return <LoadingPage onLoaded={() => setIsLoaded(true)} />;
+  // Apply dark mode class to <html>
+  if (darkMode) {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme", "light");
   }
+}, [darkMode]);
+
 
   return (
     <div className="relative">
       {/* Custom Cursor - Only show on desktop */}
       {showCursor && <CustomCursor />}
-
+      
       {/* Hide default cursor on desktop */}
       <style>{`
         ${showCursor ? '* { cursor: none !important; }' : ''}
@@ -53,7 +62,7 @@ export default function App() {
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             AG
           </div>
-
+          
           <div className="flex gap-6 items-center">
             {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
               <a
@@ -64,7 +73,7 @@ export default function App() {
                 {item}
               </a>
             ))}
-
+            
             {/* Dark Mode Toggle */}
             <button
               onClick={() => setDarkMode(!darkMode)}

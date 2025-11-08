@@ -67,10 +67,10 @@ export default function CustomCursor() {
   }, [windowSize, lastMoveTime]);
 
   // 🎨 Dynamic colors based on dark/light mode
-  const eyeColor = isDarkMode ? "#000000" : "#f60000ff";
-  const pupilColor = isDarkMode ? "#000000" : "#ffff";
+  const eyeColor = isDarkMode ? "#000000" : "#000000";
+  const pupilColor = isDarkMode ? "#000000" : "#000000";
   const shadow = isDarkMode
-    ? "drop-shadow(0 0 5px rgba(0, 0, 0, 0.25))"
+    ? "drop-shadow(0 0 5px rgba(255,255,255,0.25))"
     : "drop-shadow(0 0 3px rgba(0,0,0,0.25))";
 
   return (

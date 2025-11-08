@@ -32,7 +32,7 @@ const skillsData = {
     { name: "Next.js", icon: "/icons/nextjs-original.svg", color: "#000000" },
     { name: "JQuery", icon: "/icons/jquery-original.svg", color: "#0769AD" },
   ],
-  cloud: [{ name: "AWS", icon: "icons/icons8-aws.svg", color: "#FF9900" }],
+  cloud: [{ name: "AWS", icon: "/icons/aws-original.svg", color: "#FF9900" }],
 };
 
 function SkillIcon({ skill, index, isVisible }) {
