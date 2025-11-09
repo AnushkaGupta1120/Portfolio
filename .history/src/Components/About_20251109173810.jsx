@@ -143,7 +143,7 @@ export default function About() {
               onHoverEnd={() => setIsHovered(false)}
             >
               <img
-                src="/profile.jpg"
+                src='/profile.jpg"
                 alt="Anushka Gupta"
                 className="w-full h-full object-cover"
               />
