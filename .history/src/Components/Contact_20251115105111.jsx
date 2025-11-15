@@ -15,32 +15,22 @@ export default function Contact() {
 
  const handleSubmit = async (e) => {
   e.preventDefault();
-  console.log("Sending request...");
 
-  try {
-    const response = await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+  const response = await fetch("/api/send-email", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData),
+  });
 
-    console.log("Response status:", response.status);
+  const data = await response.json();
 
-    const data = await response.json();
-    console.log("Response data:", data);
-
-    if (data.success) {
-      alert("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      alert("Failed to send email: " + (data.error || "Unknown error"));
-    }
-  } catch (error) {
-    console.error("Fetch error:", error);
-    alert("Something went wrong.");
+  if (data.success) {
+    alert("Message sent successfully!");
+    setFormData({ name: "", email: "", message: "" });
+  } else {
+    alert("Failed to send email.");
   }
 };
-
 
 
 
