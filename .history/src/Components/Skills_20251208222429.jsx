@@ -33,6 +33,7 @@ import { useEffect, useState } from "react";
   { name: "Postman", icon: "/icons/postman-original.svg", color: "#FF6C37" },
   { name: "VS Code", icon: "/icons/vscode-original.svg", color: "#007ACC" },
   { name: "Notion", icon: "/icons/notion-original (1).svg", color: "#000000" },
+  { name: "Cursor", icon: "/icons/cursor.svg", color: "#4A90E2" },
 
   // Design
   { name: "Figma", icon: "/icons/figma-original.svg", color: "#F24E1E" },
