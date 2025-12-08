@@ -3,28 +3,20 @@ import ProjectCard from "../components/ProjectCard";
 
 const projects = [
   {
-    title: "SkillSync",
-    desc: "AI-driven platform that analyzes team skills and suggests optimal project matches for efficient collaboration.",
-    tech: ["React", "Express", "PostgreSQL"],
-    icon: "🤖",
-    live: "https://skill-sync-vert.vercel.app/",
-    github: "https://github.com/AnushkaGupta1120/SkillSync",
-  },
-  {
-    title: "KYC Verification App",
-    desc: "AI-assisted KYC onboarding system with document scanning, face matching, localization, and offline failure recovery.",
-    tech: ["React", "JavaScript", "Face API", "OCR"],
-    icon: "🪪",
-    live: "https://kyc-app-six.vercel.app/",
-    github: "https://github.com/AnushkaGupta1120/KYC-App.git",
-  },
-  {
     title: "MediFlow",
     desc: "Smart healthcare supply chain tracking system for hospitals ensuring seamless inventory management and real-time updates.",
     tech: ["React", "Node.js", "MySQL"],
     icon: "🏥",
     live: "https://mediflow-lake.vercel.app/",
     github: "https://github.com/AnushkaGupta1120/Mediflow",
+  },
+  {
+    title: "SkillSync",
+    desc: "AI-driven platform that analyzes team skills and suggests optimal project matches for efficient collaboration.",
+    tech: ["React", "Express", "PostgreSQL"],
+    icon: "🤖",
+    live: "https://skill-sync-vert.vercel.app/",
+    github: "https://github.com/AnushkaGupta1120/SkillSync",
   },
   {
     title: "BEATWELL",
@@ -34,15 +26,13 @@ const projects = [
     live: "https://anushkaguptaportfolio.vercel.app/",
     github: "https://github.com/AnushkaGupta1120/BEATWELL",
   },
-
-  // ⭐ NEW PROJECT ADDED — Quick Notes Chrome Extension
   {
-    title: "Quick Notes Chrome Extension",
-    desc: "A lightweight Chrome extension enabling instant note-taking inside the browser with auto-save and a clean, minimal popup UI.",
-    tech: ["JavaScript", "Chrome API", "Manifest V3"],
-    icon: "📝",
-    live: "https://github.com/AnushkaGupta1120/Quick-notes-extension",
-    github: "https://github.com/AnushkaGupta1120/Quick-notes-extension",
+    title: "KYC Verification App",
+    desc: "AI-assisted KYC onboarding system with document scanning, face matching, localization, and offline failure recovery.",
+    tech: ["React", "JavaScript", "Face API", "OCR"],
+    icon: "🪪",
+    live: "https://kyc-app-six.vercel.app/",
+    github: "https://github.com/AnushkaGupta1120/KYC-App",
   },
 ];
 

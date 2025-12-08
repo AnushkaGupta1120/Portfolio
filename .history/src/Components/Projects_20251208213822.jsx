@@ -16,7 +16,7 @@ const projects = [
     tech: ["React", "JavaScript", "Face API", "OCR"],
     icon: "🪪",
     live: "https://kyc-app-six.vercel.app/",
-    github: "https://github.com/AnushkaGupta1120/KYC-App.git",
+    github: "https://github.com/AnushkaGupta1120/KYC-App.git,
   },
   {
     title: "MediFlow",
@@ -33,16 +33,6 @@ const projects = [
     icon: "❤️",
     live: "https://anushkaguptaportfolio.vercel.app/",
     github: "https://github.com/AnushkaGupta1120/BEATWELL",
-  },
-
-  // ⭐ NEW PROJECT ADDED — Quick Notes Chrome Extension
-  {
-    title: "Quick Notes Chrome Extension",
-    desc: "A lightweight Chrome extension enabling instant note-taking inside the browser with auto-save and a clean, minimal popup UI.",
-    tech: ["JavaScript", "Chrome API", "Manifest V3"],
-    icon: "📝",
-    live: "https://github.com/AnushkaGupta1120/Quick-notes-extension",
-    github: "https://github.com/AnushkaGupta1120/Quick-notes-extension",
   },
 ];
 

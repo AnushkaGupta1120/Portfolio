@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-
+const skills = [
   const skills = [
   { name: "Java", icon: "/icons/java-original.svg", color: "#007396" },
   { name: "JavaScript", icon: "/icons/javascript-original.svg", color: "#F7DF1E" },
