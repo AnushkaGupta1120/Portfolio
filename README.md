@@ -4,7 +4,8 @@
 A sleek personal portfolio designed to present my **work, skills, and projects** across **AI, UI/UX, cloud, and full-stack development**.
 Built with **React.js**, **Tailwind**, and **Framer Motion**, this website reflects my approach to modern design: clean, fast, and intuitive.
 
-🌐 **Live Website:** https://anushkaguptaportfolio.vercel.app/
+## 🌐 Live Website  
+[**Anushka Portfolio**](https://anushkaguptaportfolio.vercel.app)
 
 
 ---
