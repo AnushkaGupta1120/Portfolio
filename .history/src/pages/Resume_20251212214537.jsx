@@ -161,7 +161,7 @@ export default function Resume() {
                    border border-white/10 shadow-[0_0_20px_rgba(0,255,250,0.15)]"
       >
         <iframe
-          src="public/AnushkaGupta Resume.pdf"
+          src="/resume.pdf"
           className="w-full h-[85vh] bg-[#111]"
           style={{ border: "none" }}
         ></iframe>
@@ -169,7 +169,7 @@ export default function Resume() {
 
       {/* Download Button */}
       <motion.a
-        href="public/AnushkaGupta Resume.pdf"
+        href="/resume.pdf"
         download
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
