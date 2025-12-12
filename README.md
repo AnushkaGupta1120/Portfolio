@@ -88,11 +88,10 @@ src/
 Want to collaborate or connect professionally?
 Feel free to reach out.
 
-* 📧 **Email:** [your-email@gmail.com](anushkaguptawork01@gmail.com)
-* 💼 **LinkedIn:** [https://linkedin.com/in/your-profile](https://www.linkedin.com/in/anushkagupta-tech/)
-* 🧑‍💻 **GitHub:** [https://github.com/your-username](https://github.com/AnushkaGupta1120)
+* 📧 **Email:** [anushkaguptawork01@gmail.com](mailto:anushkaguptawork01@gmail.com)
+* 💼 **LinkedIn:** [linkedin.com/in/anushkagupta-tech](https://www.linkedin.com/in/anushkagupta-tech/)
+* 🧑‍💻 **GitHub:** [github.com/AnushkaGupta1120](https://github.com/AnushkaGupta1120)
 
----
 
 ## 🌟 Deployment
 
