@@ -1,0 +1,168 @@
+/* --------------------------------------------------------- */
+/*             ANUSHKA PORTFOLIO – UNIFIED DARK THEME        */
+/* --------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------------------------------------------- */
+/* GLOBAL RESET + PURE BLACK BACKGROUND */
+/* --------------------------------------------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000 !important;
+  background-image: none !important;
+  color: #ffffff;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Smooth visual transitions */
+* {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------- */
+/* GLOBAL COLOR VARIABLES – DARK THEME */
+/* --------------------------------------------------------- */
+:root {
+  --accent: #f4a261;
+  --accent-light: #ffb87a;
+  --muted-indigo: #4b56d2;
+  --indigo-card: #161a25;
+  --soft-text: #bfc7d5;
+  --light: #ffffff;
+
+  --primary: #3b82f6;
+  --secondary: #a855f7;
+  --warning: #f59e0b;
+  --success: #10b981;
+}
+
+/* --------------------------------------------------------- */
+/* REUSABLE UI UTILITIES */
+/* --------------------------------------------------------- */
+
+/* Accent Buttons */
+.btn-accent {
+  @apply bg-gradient-to-r from-[var(--accent)] to-[var(--muted-indigo)] 
+         text-white font-semibold rounded-lg shadow-md 
+         hover:opacity-90 hover:shadow-lg transition-all duration-300;
+}
+
+.btn-accent-outline {
+  @apply border-2 border-[var(--accent)] text-[var(--accent)]
+         hover:bg-[var(--accent)] hover:text-white transition-all duration-300;
+}
+
+/* Gradient Text */
+.text-gradient {
+  @apply bg-gradient-to-r from-[var(--accent)] to-[var(--muted-indigo)] bg-clip-text text-transparent;
+}
+
+/* Cards */
+.bg-card {
+  @apply bg-[var(--indigo-card)] shadow-md rounded-xl transition-all duration-300;
+}
+
+.bg-card-hover {
+  @apply hover:shadow-[0_0_20px_rgba(244,162,97,0.4)] hover:-translate-y-1;
+}
+
+/* Glow */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(244,162,97,0.4);
+}
+
+/* Section Layout */
+.section {
+  @apply py-20 px-6 md:px-12 lg:px-20;
+}
+
+/* Divider */
+.divider {
+  @apply w-20 h-1 mx-auto rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--muted-indigo)];
+}
+
+/* Inputs */
+.input-field {
+  @apply w-full px-4 py-3 rounded-lg border-none outline-none
+         bg-[var(--indigo-card)] text-[var(--light)]
+         focus:ring-2 focus:ring-[var(--accent)] focus:scale-[1.02]
+         transition-all duration-300;
+}
+
+/* Text Utilities */
+.text-soft {
+  @apply text-gray-400;
+}
+
+/* Navigation Links */
+.nav-link {
+  @apply text-gray-300 hover:text-[var(--accent)] transition-colors duration-300 font-medium;
+}
+
+/* Icon Hover Glow */
+.icon-hover {
+  @apply transition-transform duration-300 hover:scale-110 hover:text-[var(--accent)];
+}
+
+/* --------------------------------------------------------- */
+/* ANIMATIONS */
+/* --------------------------------------------------------- */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out both;
+}
+
+.animate-floatSlow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* Slide animations */
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slideInUp {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+/* --------------------------------------------------------- */
+/* MOBILE OPTIMIZATION */
+/* --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* --------------------------------------------------------- */
+/* PRINT MODE */
+/* --------------------------------------------------------- */
+
+@media print {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
