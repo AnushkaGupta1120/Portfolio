@@ -9,8 +9,8 @@
   --card: #050505;                   /* card matte black */
   --muted: #9aa3af;                  /* secondary text */
   --white: #ffffff;
-  --teal-1: #2adaeae6;                 /* bright teal */
-  --teal-2: #66c7b2;                 /* softer teal */
+  --teal-1: #00eaff;                 /* bright teal */
+  --teal-2: #00ffc6;                 /* softer teal */
   --teal-grad: linear-gradient(90deg,var(--teal-1),var(--teal-2));
   --glass-border: rgba(0, 230, 255, 0.12);
   --soft-shadow: 0 6px 28px rgba(0,0,0,0.6);
