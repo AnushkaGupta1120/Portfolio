@@ -5,12 +5,14 @@ export default function Navbar({ unlockScroll }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const scrollToSection = (id) => {
-  unlockScroll(); // unlock the scroll when clicking any link
-  
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: "smooth" });
-};
+    unlockScroll(); // unlock page scroll when user navigates
 
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false);
+    }, 50);
+  };
 
   const navLinks = [
     { id: "home", label: "Home" },

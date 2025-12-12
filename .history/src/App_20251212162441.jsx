@@ -25,14 +25,17 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-  if (scrollLocked) {
-    document.documentElement.classList.add("no-scroll");
-    document.body.classList.add("no-scroll");
-  } else {
-    document.documentElement.classList.remove("no-scroll");
-    document.body.classList.remove("no-scroll");
+    if (scrollLocked) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [scrollLocked]);
+
+  // CONDITIONAL RETURN MUST COME AFTER ALL HOOKS
+  if (!isLoaded) {
+    return <LoadingPage onLoaded={() => setIsLoaded(true)} />;
   }
-}, [scrollLocked]);
 
   return (
     <div className={showCursor ? "cursor-none" : ""}>

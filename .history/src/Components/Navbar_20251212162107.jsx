@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
-export default function Navbar({ unlockScroll }) {
+export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const scrollToSection = (id) => {
-  unlockScroll(); // unlock the scroll when clicking any link
-  
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: "smooth" });
-};
-
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+      setMenuOpen(false);
+    }
+  };
 
   const navLinks = [
     { id: "home", label: "Home" },
