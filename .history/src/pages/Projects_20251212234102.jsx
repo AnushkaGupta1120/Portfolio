@@ -31,7 +31,7 @@ const projects = [
     desc: "Heart disease prediction system achieving 92% accuracy using machine learning and AWS cloud integration.",
     tech: ["Python", "Flask", "AWS"],
     icon: "❤️",
-    live: "https://main.d35vbh139ds45v.amplifyapp.com/",
+    live: "https://anushkaguptaportfolio.vercel.app/",
     github: "https://github.com/AnushkaGupta1120/BEATWELL",
   },
   {
