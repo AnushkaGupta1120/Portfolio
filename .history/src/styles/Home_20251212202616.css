@@ -1,0 +1,9 @@
+[plugin:vite:react-babel] C:\Users\shubi\portfolio-website\src\pages\Hero.jsx: Unexpected token (5:0)
+  8 |   display: flex;
+C:/Users/shubi/portfolio-website/src/pages/Hero.jsx:5:0
+3  |  ======================================= */
+4  |  
+5  |  .home-section {
+   |      ^
+6  |    width: 100%;
+7  |    padding: 4rem 0;

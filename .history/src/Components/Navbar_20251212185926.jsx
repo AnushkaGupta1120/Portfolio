@@ -27,7 +27,7 @@ export default function Navbar() {
           <div>
             <div style={{ fontWeight: 800 }}>Anushka Gupta</div>
             <div style={{ fontSize: 12, color: "var(--muted)" }}>
-              AI • Cloud • Full-Stack
+              Full-Stack • Cloud • UI/UX
             </div>
           </div>
         </NavLink>
