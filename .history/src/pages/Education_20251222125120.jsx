@@ -18,7 +18,7 @@ export default function Education() {
       id="education"
       className={`section 
                   bg-section-light bg-section-dark
-                  text-white dark:text-gray-100
+                  text-gray-900 dark:text-gray-100
                   transition-all duration-500
                   ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
                   transform ease-out`}

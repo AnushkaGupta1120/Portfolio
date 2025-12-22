@@ -45,7 +45,8 @@ export default function About() {
             <p className="text-muted" style={{ lineHeight: "1.8", fontSize: "1.05rem" }}>
               I'm <span style={{ color: "var(--teal-1)", fontWeight: 600 }}>Anushka Gupta</span>,
               a Full-Stack Developer and UI/UX Designer who bridges the gap between engineering and aesthetics. I specialize in crafting scalable, cloud-native applications that are as intuitive as they are powerful.
-
+<br></br><p>My focus is on the complete digital lifecycle—from designing pixel-perfect interfaces to deploying secure server-side architectures. I build solutions that merge complex technology with seamless design.
+</p>
             </p>
 
             <p className="text-muted" style={{ marginTop: "1rem", lineHeight: "1.8" }}>
