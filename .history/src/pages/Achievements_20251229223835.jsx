@@ -46,8 +46,8 @@ other: [
     title: "Figma UI/UX Complete BootCamp",
     org: "Udemy",
     date: "January 2025",
-    img: "/certs/Figma.png",
-    link: "/certs/Figma.png",
+    img: "/certs/Figma.jpg",
+    link: "/certs/Figma.jpg",
   },
 ],
 

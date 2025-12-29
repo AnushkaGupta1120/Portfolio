@@ -19,36 +19,21 @@ const CERTS = {
     link: "/certs/mckinsey.jpg",
   },
   {
-    title: "JLPT N5",
-    org: "Japan Foundation",
-    date: "Aug 2025",
-    img: "/certs/Jlpt.png",
-    link: "/certs/jlpt.jpg",
-  },
+  title: "JLPT N5",
+  org: "Japan Foundation",
+  date: "Aug 2025",
+  file: "/certs/JLPT N5.pdf", 
+   type: "pdf",  // <= PDF instead of image
+},
   {
     title: "Reliance Foundation Scholarship Awardee",
     org: "Reliance Foundation",
-    date: "June 2023",
-    img: "/certs/Reliance Foundation.png",
-    link: "/certs/reliance.jpg",
+    date: "2025",
+    file: "/certs/RFSCH230100088391 (1).pdf",
+     type: "pdf",   // <= PDF instead of image
+
   },
   
-],
-other: [
-  {
-    title: "Adobe UI/UX Design Certification",
-    org: "Ethnus",
-    date: "Apr 2025",
-    img: "/certs/Adobe.jpg",
-    link: "/certs/Adobe.jpg",
-  },
-  {
-    title: "Figma UI/UX Complete BootCamp",
-    org: "Udemy",
-    date: "January 2025",
-    img: "/certs/Figma.png",
-    link: "/certs/Figma.png",
-  },
 ],
 
 };
@@ -101,72 +86,118 @@ export default function Certificates() {
         </div>
 
         {/* Cards */}
-        <div
-          style={{
-            marginTop: 28,
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: 20,
-          }}
-        >
-          <AnimatePresence mode="wait">
-            {CERTS[tab].map((c, idx) => (
-              <motion.div
-                key={c.title}
-                className="cert card"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.35, delay: idx * 0.07 }}
-                whileHover={{
-                  scale: 1.03,
-                  boxShadow: "0 0 15px rgba(0, 123, 255, 0.4)",
-                }}
-                style={{
-                  background: "#1a1a1a",
-                  borderRadius: 12,
-                  padding: 16,
-                  color: "#fff",
-                }}
-              >
-                <img
-                  src={c.img}
-                  alt={c.title}
-                  style={{
-                    width: "100%",
-                    height: 160,
-                    borderRadius: 10,
-                    objectFit: "cover",
-                    marginBottom: 12,
-                  }}
-                />
+        {/* Cards */}
+<div
+  style={{
+    marginTop: 28,
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gap: 20,
+  }}
+>
+  <AnimatePresence mode="wait">
+    {CERTS[tab].map((c, idx) => (
+      <motion.div
+        key={c.title}
+        className="cert card"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
+        transition={{ duration: 0.35, delay: idx * 0.07 }}
+        whileHover={{
+          scale: 1.03,
+          boxShadow: "0 0 15px rgba(0, 123, 255, 0.4)",
+        }}
+        style={{
+          background: "#1a1a1a",
+          borderRadius: 12,
+          padding: 16,
+          color: "#fff",
+        }}
+      >
 
-                <strong style={{ fontSize: 15 }}>{c.title}</strong>
+        {/* Image OR PDF Thumbnail */}
+        {c.img ? (
+          <img
+            src={c.img}
+            alt={c.title}
+            style={{
+              width: "100%",
+              height: 160,
+              borderRadius: 10,
+              objectFit: "cover",
+              marginBottom: 12,
+            }}
+          />
+        ) : (
+          <div
+            style={{
+              width: "100%",
+              height: 160,
+              borderRadius: 10,
+              background: "#222",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: 18,
+              color: "#fff",
+              marginBottom: 12,
+              border: "1px solid #444",
+            }}
+          >
+            PDF Document
+          </div>
+        )}
 
-                <div style={{ fontSize: 13, color: "#bbb" }}>
-                  {c.org} • {c.date}
-                </div>
-
-                <div style={{ marginTop: 12 }}>
-                  <button
-                    className="btn"
-                    onClick={() => setSelectedCert(c)}
-                    style={{
-                      background: "#007bff",
-                      border: "none",
-                      color: "white",
-                      borderRadius: 6,
-                      padding: "6px 14px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    View
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+        {/* Title + Meta */}
+        <strong style={{ fontSize: 15 }}>{c.title}</strong>
+        <div style={{ fontSize: 13, color: "#bbb" }}>
+          {c.org} • {c.date}
         </div>
+
+        {/* View Button Handler */}
+        <div style={{ marginTop: 12 }}>
+          {c.file ? (
+            <a
+              href={c.file}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                background: "#007bff",
+                border: "none",
+                color: "white",
+                borderRadius: 6,
+                padding: "6px 14px",
+                cursor: "pointer",
+                display: "inline-block",
+                textDecoration: "none",
+              }}
+            >
+              View PDF
+            </a>
+          ) : (
+            <button
+              className="btn"
+              onClick={() => setSelectedCert(c)}
+              style={{
+                background: "#007bff",
+                border: "none",
+                color: "white",
+                borderRadius: 6,
+                padding: "6px 14px",
+                cursor: "pointer",
+              }}
+            >
+              View
+            </button>
+          )}
+        </div>
+
+      </motion.div>
+    ))}
+  </AnimatePresence>
+</div>
+
       </div>
 
       {/* Modal */}

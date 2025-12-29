@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Achievements from "./pages/Achievements";
+import Education from "./pages/Education";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 
@@ -25,7 +26,9 @@ export default function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/achievements" element={<Achievements />} />
+          <Route path="/education" element={<Education />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/coffee" element={<GetMeACoffee />} />
           <Route path="/contact" element={<Contact />} />
 
           {/* Optional 404 page */}

@@ -19,36 +19,19 @@ const CERTS = {
     link: "/certs/mckinsey.jpg",
   },
   {
-    title: "JLPT N5",
-    org: "Japan Foundation",
-    date: "Aug 2025",
-    img: "/certs/Jlpt.png",
-    link: "/certs/jlpt.jpg",
-  },
+  title: "JLPT N5",
+  org: "Japan Foundation",
+  date: "Aug 2025",
+  file: "/certs/JLPT N5.pdf",   // <= PDF instead of image
+},
   {
     title: "Reliance Foundation Scholarship Awardee",
     org: "Reliance Foundation",
-    date: "June 2023",
-    img: "/certs/Reliance Foundation.png",
-    link: "/certs/reliance.jpg",
+    date: "2025",
+    file: "/certs/RFSCH230100088391 (1).pdf",   // <= PDF instead of image
+
   },
   
-],
-other: [
-  {
-    title: "Adobe UI/UX Design Certification",
-    org: "Ethnus",
-    date: "Apr 2025",
-    img: "/certs/Adobe.jpg",
-    link: "/certs/Adobe.jpg",
-  },
-  {
-    title: "Figma UI/UX Complete BootCamp",
-    org: "Udemy",
-    date: "January 2025",
-    img: "/certs/Figma.png",
-    link: "/certs/Figma.png",
-  },
 ],
 
 };

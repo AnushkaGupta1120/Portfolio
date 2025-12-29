@@ -15,40 +15,24 @@ const CERTS = {
     title: "McKinsey Forward Program",
     org: "McKinsey",
     date: "Nov 2025",
-    img: "/certs/mckinsey-org-forward-program.png",
+    img: "/certs/mckinsey.jpg",
     link: "/certs/mckinsey.jpg",
   },
   {
     title: "JLPT N5",
     org: "Japan Foundation",
     date: "Aug 2025",
-    img: "/certs/Jlpt.png",
+    img: "/certs/jlpt.jpg",
     link: "/certs/jlpt.jpg",
   },
   {
     title: "Reliance Foundation Scholarship Awardee",
     org: "Reliance Foundation",
-    date: "June 2023",
-    img: "/certs/Reliance Foundation.png",
+    date: "2025",
+    img: "/certs/reliance.jpg",
     link: "/certs/reliance.jpg",
   },
   
-],
-other: [
-  {
-    title: "Adobe UI/UX Design Certification",
-    org: "Ethnus",
-    date: "Apr 2025",
-    img: "/certs/Adobe.jpg",
-    link: "/certs/Adobe.jpg",
-  },
-  {
-    title: "Figma UI/UX Complete BootCamp",
-    org: "Udemy",
-    date: "January 2025",
-    img: "/certs/Figma.png",
-    link: "/certs/Figma.png",
-  },
 ],
 
 };

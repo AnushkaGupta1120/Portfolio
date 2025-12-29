@@ -11,6 +11,7 @@ export default function Navbar() {
     { to: "/skills", label: "Skills" },
     { to: "/projects", label: "Projects" },
     { to: "/achievements", label: "Achievements" },
+    { to: "/education", label: "Education" },
     { to: "/resume", label: "Resume" },
     { to: "/contact", label: "Contact" },
   ];

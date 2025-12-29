@@ -28,27 +28,11 @@ const CERTS = {
   {
     title: "Reliance Foundation Scholarship Awardee",
     org: "Reliance Foundation",
-    date: "June 2023",
+    date: "2025",
     img: "/certs/Reliance Foundation.png",
     link: "/certs/reliance.jpg",
   },
   
-],
-other: [
-  {
-    title: "Adobe UI/UX Design Certification",
-    org: "Ethnus",
-    date: "Apr 2025",
-    img: "/certs/Adobe.jpg",
-    link: "/certs/Adobe.jpg",
-  },
-  {
-    title: "Figma UI/UX Complete BootCamp",
-    org: "Udemy",
-    date: "January 2025",
-    img: "/certs/Figma.png",
-    link: "/certs/Figma.png",
-  },
 ],
 
 };
