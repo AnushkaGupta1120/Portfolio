@@ -1,208 +1,120 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
 
-const CERTS = {
+const certs = {
   tech: [
     {
-    title: "Databricks Generative AI Fundamentals",
-    org: "Databricks",
-    date: "2025",
-    img: "/certs/Databricks Generative AI Fundamentals.jpg",
-    link: "/certs/databricks-genai.jpg",
-  },
-  
-  {
-    title: "McKinsey Forward Program",
-    org: "McKinsey",
-    date: "Nov 2025",
-    img: "/certs/mckinsey-org-forward-program.png",
-    link: "/certs/mckinsey.jpg",
-  },
-  {
-    title: "JLPT N5",
-    org: "Japan Foundation",
-    date: "Aug 2025",
-    img: "/certs/Jlpt.png",
-    link: "/certs/jlpt.jpg",
-  },
-  {
-    title: "Reliance Foundation Scholarship Awardee",
-    org: "Reliance Foundation",
-    date: "June 2023",
-    img: "/certs/Reliance Foundation.png",
-    link: "/certs/reliance.jpg",
-  },
-  
-],
-other: [
-  {
-    title: "Adobe UI/UX Design Certification",
-    org: "Ethnus",
-    date: "Apr 2025",
-    img: "/certs/Adobe.jpg",
-    link: "/certs/Adobe.jpg",
-  },
-  {
-    title: "Figma UI/UX Complete BootCamp",
-    org: "Udemy",
-    date: "January 2025",
-    img: "/certs/Figma.png",
-    link: "/certs/Figma.png",
-  },
-],
-
+      title: "Databricks Generative AI Fundamentals",
+      org: "Databricks",
+      date: "2025",
+      img: "/certs/Databricks Generative AI Fundamentals.jpg",
+      link: "/certs/Databricks Generative AI.pdf",
+    },
+    {
+      title: "Career Essentials in Generative AI",
+      org: "Microsoft & LinkedIn",
+      date: "Dec 2025",
+      img: "/certs/CertificateOfCompletion_Career Essentials in Generative AI by Microsoft and LinkedIn.png",
+      link: "/certs/CertificateOfCompletion_Career Essentials in Generative AI by Microsoft and LinkedIn.pdf",
+    },
+    {
+      title: "SQL (Basic)",
+      org: "HackerRank",
+      date: "Jan 2025",
+      img: "/certs/sql_basic certificate.png",
+      link: "/certs/sql_basic certificate.pdf",
+    },
+    {
+      title: "SQL (Intermediate)",
+      org: "HackerRank",
+      date: "2025",
+      img: "/certs/sql_intermediate certificate.png",
+      link: "/certs/sql_intermediate certificate.pdf",
+    },
+    {
+      title: "McKinsey Forward Program",
+      org: "McKinsey",
+      date: "Nov 2025",
+      img: "/certs/mckinsey-org-forward-program.png",
+      link: "/certs/McKinsey.orgForward20251210-31-v1k5te.pdf",
+    },
+    {
+      title: "JLPT N5",
+      org: "Japan Foundation",
+      date: "Aug 2025",
+      img: "/certs/Jlpt.png",
+      link: "/certs/JLPT N5.pdf",
+    },
+    {
+      title: "Reliance Foundation Scholarship Awardee",
+      org: "Reliance Foundation",
+      date: "Jun 2023",
+      img: "/certs/Reliance Foundation.png",
+      link: "/certs/RFSCH230100088391 (1).pdf",
+    },
+  ],
+  other: [
+    {
+      title: "Adobe UI/UX Design Certification",
+      org: "Ethnus",
+      date: "Apr 2025",
+      img: "/certs/Adobe.jpg",
+      link: "/certs/Adobe UIUX certificate.pdf",
+    },
+    {
+      title: "Figma UI/UX Complete Bootcamp",
+      org: "Udemy",
+      date: "Jan 2025",
+      img: "/certs/Figma.png",
+      link: "/certs/Figma.pdf",
+    },
+  ],
 };
 
-export default function Certificates() {
-  const [tab, setTab] = useState("tech");
-  const [selectedCert, setSelectedCert] = useState(null);
-
+const Certifications = () => {
   return (
-    <section className="container" style={{ padding: "40px 0" }}>
-      <div
-        className="card"
-        style={{ background: "#111", borderRadius: 12, padding: 24 }}
-      >
-        <h2
-          style={{
-            fontSize: "1.8rem",
-            color: "#fff",
-            marginBottom: 4,
-          }}
-        >
-          Certifications & Scholarships 🏅
-        </h2>
-
-        <p className="lead" style={{ color: "#aaa" }}>
-          Explore my professional achievements — verified & reviewed.
-        </p>
-
-        {/* Tabs */}
-        <div style={{ display: "flex", gap: 10, marginTop: 16 }}>
-          {["tech", "other"].map((t) => (
-            <button
-              key={t}
-              onClick={() => setTab(t)}
-              className={tab === t ? "tab active" : "tab"}
-              style={{
-                padding: "8px 18px",
-                borderRadius: 8,
-                border: "none",
-                cursor: "pointer",
-                background: tab === t ? "#007bff" : "#333",
-                color: "#fff",
-                fontWeight: 500,
-                transition: "0.3s",
-              }}
-            >
-              {t === "tech" ? "Major" : "Design"}
-            </button>
-          ))}
-        </div>
-
-        {/* Cards */}
-        <div
-          style={{
-            marginTop: 28,
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: 20,
-          }}
-        >
-          <AnimatePresence mode="wait">
-            {CERTS[tab].map((c, idx) => (
-              <motion.div
-                key={c.title}
-                className="cert card"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.35, delay: idx * 0.07 }}
-                whileHover={{
-                  scale: 1.03,
-                  boxShadow: "0 0 15px rgba(0, 123, 255, 0.4)",
-                }}
-                style={{
-                  background: "#1a1a1a",
-                  borderRadius: 12,
-                  padding: 16,
-                  color: "#fff",
-                }}
-              >
-                <img
-                  src={c.img}
-                  alt={c.title}
-                  style={{
-                    width: "100%",
-                    height: 160,
-                    borderRadius: 10,
-                    objectFit: "cover",
-                    marginBottom: 12,
-                  }}
-                />
-
-                <strong style={{ fontSize: 15 }}>{c.title}</strong>
-
-                <div style={{ fontSize: 13, color: "#bbb" }}>
-                  {c.org} • {c.date}
-                </div>
-
-                <div style={{ marginTop: 12 }}>
-                  <button
-                    className="btn"
-                    onClick={() => setSelectedCert(c)}
-                    style={{
-                      background: "#007bff",
-                      border: "none",
-                      color: "white",
-                      borderRadius: 6,
-                      padding: "6px 14px",
-                      cursor: "pointer",
-                    }}
-                  >
-                    View
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
+    <div className="p-6">
+      {/* Tech Certificates Section */}
+      <h2 className="text-2xl font-bold mb-4">Tech Certifications</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        {certs.tech.map((cert, index) => (
+          <CertCard key={index} cert={cert} />
+        ))}
       </div>
 
-      {/* Modal */}
-      <AnimatePresence>
-        {selectedCert && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            style={{
-              position: "fixed",
-              inset: 0,
-              background: "rgba(0,0,0,0.85)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              zIndex: 1000,
-            }}
-            onClick={() => setSelectedCert(null)}
-          >
-            <motion.img
-              src={selectedCert.img}
-              alt={selectedCert.title}
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-              style={{
-                maxWidth: "90%",
-                maxHeight: "85%",
-                borderRadius: 10,
-              }}
-              onClick={(e) => e.stopPropagation()}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </section>
+      {/* Other Certificates Section */}
+      <h2 className="text-2xl font-bold mb-4">Other Certifications</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {certs.other.map((cert, index) => (
+          <CertCard key={index} cert={cert} />
+        ))}
+      </div>
+    </div>
   );
-}
+};
+
+// Helper Component to render individual cards
+const CertCard = ({ cert }) => (
+  // UPDATE: Changed p-4 (16px) to p-3.5 (14px) to reduce size by 2px
+  <div className="border rounded-lg shadow-md p-2.5 hover:shadow-lg transition">
+    <img
+      src={cert.img}
+      alt={cert.title}
+      // UPDATE: Changed mb-4 to mb-3.5 to match tighter spacing
+      className="w-full h-40 object-cover rounded-md mb-3.5"
+    />
+    <h3 className="text-xl font-semibold">{cert.title}</h3>
+    <p className="text-gray-600">
+      {cert.org} • {cert.date}
+    </p>
+    <a
+      href={cert.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block mt-3 text-blue-600 hover:underline"
+    >
+      View Credential
+    </a>
+  </div>
+);
+
+export default Certifications;
